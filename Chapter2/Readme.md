@@ -1,1 +1,4 @@
-# CSharp-Data-Structure-Note
+# Chapter 2: Arrays and ArrayLists
+
+## ARRAY BASICS 
+### Declaring and Initializing Arrays
