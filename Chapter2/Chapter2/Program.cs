@@ -65,6 +65,8 @@ namespace Chapter2
                 Console.WriteLine("Average sales for month: "+ month+ ": " + average2);
             }
             ConsolePrinter.Print(sales);
+
+            ArrayListSample.Sample1();
         }
 
         static int sumNums(params int[] nums){

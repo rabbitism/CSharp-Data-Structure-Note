@@ -77,14 +77,14 @@ jagged[0][0] = 23; //assign the first element of the first array
 jagged[7][5] = 45; //assign the sixth element of the eighth array
 ```
 
-### ArrayList Class
+## ARRAYLIST CLASS
 Used when the number of elements in an array can grow larger, smaller. Can be more efficient than using ReDim Preserver with a standard array.
 An `ArrayList` stores objects using the `Object` type.
 
 ### Members of the `ArrayList` Class
 * `Add()`: Adds an element to the ArrayList. 
 * `AddRange()`: Adds the elements of a collection to the end of the ArrayList. 
-* `Capacity`: Stores the number of elements the ArrayList can hold. 
+* `Capacity`: Stores the number of elements the ArrayList can hold. Originally 16 in .Net Framework, 8 in .Net Core?
 * `Clear()`: Removes all elements from the ArrayList. 
 * `Contains()`: Determines if a speciﬁed item is in the ArrayList. 
 * `CopyTo()`: Copies the ArrayList or a segment of it to an array. 
@@ -101,3 +101,39 @@ An `ArrayList` stores objects using the `Object` type.
 * `Sort()`: Alphabetically sorts the elements in the ArrayList. 
 * `ToArray()`: Copies the elements of the ArrayList to an array. 
 * `TrimToSize()`: Sets the capacity of the ArrayList to the number of elements in the ArrayList.
+
+### Using the `ArrayList` Class
+Declare:
+```csharp
+ArrayList grades = new ArrayList();
+```
+Objects are added to an `ArrayList` using `Add` method. this method takes one argument - an `Object` to add to the `ArrayList`. and returns an integer indicating the position in the `ArrayList`.
+
+Use foreach to loop:
+```csharp
+foreach(Object grade in grades){
+    total += (int)grade;
+}
+```
+Use Insert to add a member to a particular position
+```csharp
+grades.Insert(1, 99);
+```
+Remove members:
+```csharp
+grades.Remove(54);//Remove member 54. nothing happens if member is not in ArrayList.
+grades.Contains(54); //Used to check whether a member is in ArrayList.
+grades.RemoveAt(2);//Remove third member in grades. 
+grades.IndexOf(70); //return index of member, -1 if member is not in ArrayList.
+```
+
+Add ranges of objects to ArrayList, the objects must be stored in a data type that is derived from `ICollection`. like `Array`, `Collection`, `ArrayList`.
+```csharp
+ArrayList names = new ArrayList();
+string[] newNames = new string[]{};
+ArrayList moreNames = new ArrayList();
+names.InsertRange(0, newNames);
+names.AddRange(moreNames);
+```
+`GetRange` takes two arguments: the starting index and the number of elements to retrieve from the `ArrayList`. `GetRange` is not descruction, it copies the from the orignal `ArrayList` to a new `ArrayList`.
+
