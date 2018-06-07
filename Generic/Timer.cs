@@ -5,8 +5,8 @@ namespace Generic
 {
     public class Timer
     {
-        TimeSpan startingTime;
-        TimeSpan duration;
+        private TimeSpan startingTime;
+        private TimeSpan duration;
 
         public Timer(){
             startingTime = new TimeSpan(0);
@@ -17,7 +17,7 @@ namespace Generic
             duration = Process.GetCurrentProcess().Threads[0].UserProcessorTime.Subtract(startingTime);
         }
 
-        public void startTime(){
+        public void Start(){
             GC.Collect();
             GC.WaitForPendingFinalizers();
             startingTime = Process.GetCurrentProcess().Threads[0].UserProcessorTime;
