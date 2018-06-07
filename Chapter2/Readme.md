@@ -2,3 +2,7 @@
 
 ## ARRAY BASICS 
 ### Declaring and Initializing Arrays
+
+```CSharp
+type[] array-name;
+```
