@@ -58,5 +58,19 @@ namespace Generic{
             Console.WriteLine(num);
         }
 
+        public static void Print<T>(T[][] array){
+            if(array == null){
+                Console.WriteLine("Empty Array.");
+            }
+            else{
+                for(int i = 0; i < array.GetLength(0); i++){
+                    for(int j = 0; j < array[i].GetLength(0); j++){
+                        Console.Write(array[i][j]+"\t");
+                    }
+                    Console.Write("\n");
+                }
+            }
+        }
+
     }
 }
