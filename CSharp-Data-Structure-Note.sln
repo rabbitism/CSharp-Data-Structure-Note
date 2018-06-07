@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generic", "Generic", "{F5D45C0B-511B-492B-A1D6-9EDF1E968E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic", "Generic\Generic\Generic.csproj", "{7ABC81BB-D34F-4736-9347-883951DFBB42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic", "Generic\Generic.csproj", "{7ABC81BB-D34F-4736-9347-883951DFBB42}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter2", "Chapter2", "{953C96DB-AD0A-4B28-86D2-57E4136D9F93}"
 EndProject
