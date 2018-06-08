@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Generic{
@@ -34,7 +35,7 @@ namespace Generic{
             }
             else{
                 foreach(T item in array){
-                    Console.WriteLine(item);
+                    Console.Write(item+"\t");
                 }
             }
             
@@ -70,6 +71,20 @@ namespace Generic{
                     Console.Write("\n");
                 }
             }
+        }
+
+        public static void Print(ArrayList array)
+        {
+            if(array == null){
+                Console.WriteLine("Empty Array.");
+            }
+            else{
+                foreach( var obj in array){
+                    if(obj == null) Console.Write("Null"+"\n");
+                    else Console.Write(array.ToString()+"\n");
+                }
+            }
+            
         }
 
     }
