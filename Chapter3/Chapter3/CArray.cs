@@ -39,7 +39,7 @@ namespace Chapter3{
 
                     }
                 }
-                this.DisplayElements();
+                //this.DisplayElements();
             }
         }
 
@@ -54,7 +54,7 @@ namespace Chapter3{
                 temp = arr[outer];
                 arr[outer]=arr[min];
                 arr[min] = temp;
-                this.DisplayElements();
+                //this.DisplayElements();
             }
         }
 
@@ -68,7 +68,7 @@ namespace Chapter3{
                     inner -=1;
                 }
                 arr[inner]=temp;
-                this.DisplayElements();
+                //this.DisplayElements();
             }
         }
     }

@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 
 namespace Chapter3{
-    public static class SortSample{
-        public static void BubbleSortShowcase(){
+    public class SortSample{
+        public void BubbleSortShowcase(){
             CArray nums = new CArray(10);
             Random rnd = new Random(100);
             for(int i = 0; i< 10; i++){
@@ -18,7 +18,7 @@ namespace Chapter3{
             nums.DisplayElements();
         }
 
-        public static void SelectionSortShowcase(){
+        public void SelectionSortShowcase(){
             CArray nums = new CArray(10);
             Random rnd = new Random(100);
             for(int i = 0; i< 10; i++){
@@ -33,7 +33,7 @@ namespace Chapter3{
             nums.DisplayElements();
         }
 
-        public static void InsertionSortSample(){
+        public void InsertionSortShowcase(){
             CArray nums = new CArray(10);
             Random rnd = new Random(100);
             for(int i = 0; i< 10; i++){

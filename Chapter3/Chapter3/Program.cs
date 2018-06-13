@@ -7,23 +7,30 @@ namespace Chapter3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Timer timer = new Timer();
-            timer.Start();
-            SortSample.BubbleSortShowcase();
-            timer.Stop();
-            string a = timer.GetDuration();
-            timer.Start();
-            SortSample.SelectionSortShowcase();
-            timer.Stop();
-            string b = timer.GetDuration();
-            timer.Start();
-            SortSample.InsertionSortSample();
-            timer.Stop();
-            string c = timer.GetDuration();
-            Console.WriteLine("Bubble Sort: "+a);
-            Console.WriteLine("Selection Sort: "+b);
-            Console.WriteLine("Insertion Sort: "+c);
+            Timing sortTime = new Timing(); 
+            Random rnd = new Random(100); 
+            int numItems = 6000; 
+            CArray theArray = new CArray(numItems); 
+            for(int i = 0; i <numItems; i++)
+                theArray.Insert((int)(rnd.NextDouble() * 100)); 
+            sortTime.Start(); 
+            theArray.SelectionSort(); 
+            sortTime.Stop(); 
+            Console.WriteLine("Time for Selection sort: " + sortTime.Result().TotalMilliseconds); 
+            theArray.Clear(); 
+            for(int i = 0; i <numItems; i++) 
+                theArray.Insert((int)(rnd.NextDouble() * 100)); 
+            sortTime.Start(); 
+            theArray.BubbleSort(); 
+            sortTime.Stop(); 
+            Console.WriteLine("Time for Bubble sort: " + sortTime.Result().TotalMilliseconds); 
+            theArray.Clear(); 
+            for(int i = 0; i <numItems; i++) 
+                theArray.Insert((int)(rnd.NextDouble() * 100)); 
+            sortTime.Start(); 
+            theArray.InsertionSort(); 
+            sortTime.Stop(); 
+            Console.WriteLine("Time for Insertion sort: " + sortTime.Result().TotalMilliseconds);
 
         }
     }
